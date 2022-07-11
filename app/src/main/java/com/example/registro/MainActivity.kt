@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         initUI()
         checkUserValues()
+        binding.btnRegisterFcb.setOnClickListener {
+            val intent=Intent(this@MainActivity,ResultActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun initUI() {
@@ -63,7 +67,6 @@ class MainActivity : AppCompatActivity() {
                     }
             }
         }
-        goAccess()
     }
     private fun goAccess() {
        startActivity(Intent(this, RegisterActivity::class.java))

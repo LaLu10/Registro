@@ -11,5 +11,8 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding=ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.ivBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 }
